@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'selfgpt/style.css' %}">
+<html lang="ko">
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>수어 번역 서비스</title>
+        {% comment %} <link rel="preconnect" href="https://fonts.googleapis.com"> {% endcomment %}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    </head>
+<body>
+    <header>
+        <h1>기초 수어 배우기</h1>
+    </header>
+    <nav>
+        <a href="/chatgpt/">챗봇</a>
+        <a href="/signlanguagetochatgpt/">수어 번역</a>
+        <a href="/">Index</a>
+    </nav>
+    <section>
+        <h2>안녕하세요</h2>
+        <p>기초 수어로 여러 가지 표현을 배워보세요.</p>
+
+        <div class="sign-language">
+            <img src="hello_sign_language.jpg" alt="안녕하세요 수어 표현">
+            <p>안녕하세요</p>
+        </div>
+
+        <!-- 추가적인 수어 표현 추가 -->
+        <!-- <div class="sign-language">
+            <img src="image_url" alt="표현 설명">
+            <p>표현 설명</p>
+        </div> -->
+    </section>
+    <footer>
+        <p>만든이: 당신의 이름</p>
+    </footer>
+</body>
+</html>
