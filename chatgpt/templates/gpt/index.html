@@ -1,0 +1,37 @@
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'gpt/style.css' %}">
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수어 번역 서비스</title>
+    {% comment %} <link rel="preconnect" href="https://fonts.googleapis.com"> {% endcomment %}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>수어 번역 서비스</h1>
+    </header>
+    <nav>
+        <a href="/">Index</a>
+        <a href="/signlanguagetochatgpt/">수어 번역</a>
+        <a href="https://www.djangoproject.com/" target="_blank">Django</a> <!-- Django 공식 사이트로의 링크 추가 -->
+    </nav>
+
+<article class="main-content">
+    <form action="chat" method="post" entype="application/x-www-form-urlencoded">
+        {% csrf_token %}
+        <div id="file-module-0">
+            <span>Q</span> <textarea id="question" name="question"></textarea>
+        </div>
+        <div><button id="text-button" type="submit">질문</button></div>
+    </form>
+</article>
+</body>
