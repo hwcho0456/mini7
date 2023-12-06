@@ -10,12 +10,17 @@ body {
     color: #0C4B33;
 }
 header {
+    font-family: 'Song Myung', serif;
     /* 변경된 부분: 헤더의 배경색을 흰색으로 변경 */
     background: linear-gradient(to left, #000428, #004e92);    
     /* 변경된 부분: 헤더의 글씨색을 검정색으로 변경 */
     color: white;
     padding: 1em;
     text-align: center;
+}
+h1 {
+    font-family: 'Song Myung', serif;
+    font-weight: bold;
 }
 nav {
     /* 변경된 부분: 네비게이션의 배경색을 흰색으로 변경 */

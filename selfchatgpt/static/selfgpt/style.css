@@ -11,6 +11,7 @@ body {
 }
 header {
     /* 변경된 부분: 헤더의 배경색을 흰색으로 변경 */
+    font-family: 'Song Myung', serif;
     background: linear-gradient(to left, #000428, #004e92);    
     /* 변경된 부분: 헤더의 글씨색을 검정색으로 변경 */
     color: white;

@@ -1,11 +1,13 @@
 /* nav */
 
 header {
+    font-family: 'Song Myung', serif;
     background: linear-gradient(to left, #000428, #004e92);
     color: white; 
     padding: 1em;
 }
 h1 {
+    font-family: 'Song Myung', serif;
     color: white;
     text-align: center;
     font-size: xx-large;
