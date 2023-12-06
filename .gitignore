@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 .env
 .DS_Store
-*/__pycache__/
-*.pyc
-*.pyo
-*.pyd
-=======
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
