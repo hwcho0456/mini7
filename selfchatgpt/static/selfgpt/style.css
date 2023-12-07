@@ -1,4 +1,4 @@
-body, h2, h3, p {
+body, h2, h3, h4, h5, h6, p {
     font-family: 'Nanum Myeongjo', sans-serif;
 }
 
@@ -9,69 +9,78 @@ body {
     background-color: #eeeeee;
     color: #0C4B33;
 }
+
 header {
-    /* 변경된 부분: 헤더의 배경색을 흰색으로 변경 */
     font-family: 'Song Myung', serif;
-    background: linear-gradient(to left, #000428, #004e92);    
-    /* 변경된 부분: 헤더의 글씨색을 검정색으로 변경 */
+    background: linear-gradient(to left, #000428, #004e92);
     color: white;
     padding: 1em;
     text-align: center;
 }
+
 nav {
-    /* 변경된 부분: 네비게이션의 배경색을 흰색으로 변경 */
     background-color: white;
-    /* 변경된 부분: 네비게이션의 글씨색을 검정색으로 변경 */
     color: black;
     padding: 1em;
     text-align: right;
     font-weight: bold;
 }
-/* 변경된 부분: 링크의 배경을 흰색으로, 글자 색상을 검정색으로 변경 */
+
 nav a {
-    /* 변경된 부분: 링크의 배경색을 흰색으로 변경 */
     background-color: white;
-    /* 변경된 부분: 링크의 글씨색을 검정색으로 변경 */
     color: black;
     padding: 0.5em 1em;
     border-radius: 5px;
     margin: 0.5em;
     text-decoration: none;
-    display: inline; /* 인라인으로 표시 */
+    display: inline;
 }
-/* 첫 번째 섹션 스타일 */
-section:nth-of-type(1) {
-    padding: 2em;
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-height: 250px;
+}
+
+section {
     text-align: center;
-    background: #eeeeee;
-    color: black;
+    background: white;
+    color: #0C4B33;
+    padding: 2em;
     margin-bottom: 50px;
 }
 
-/* 두 번째 섹션 스타일 */
-section:nth-of-type(2) {
-    padding: 2em;
-    text-align: center;
-    background: linear-gradient(to right, #004e92, #000428);
+.active {
+    transform: translateX(0);
+}
+
+.slider-container {
+    overflow: hidden;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.control-button {
+    background-color: #0C4B33;
     color: white;
-    margin-bottom: 50px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin: 0 10px; /* 버튼 간격 추가 */
+    cursor: pointer;
+    font-size: 16px;
 }
-/* 변경된 부분: 이미지 스타일 */
-img {
-    max-width: 100%; /* 이미지의 최대 너비를 화면에 맞게 조절 */
-    height: auto; /* 이미지의 높이 자동 조절 */
-    border-radius: 10px; /* 이미지에 둥근 테두리 적용 */
-    margin-top: 20px; /* 이미지와 텍스트 사이의 간격 조절 */
-    max-height: 250px;
-}
-/* 변경된 부분: 푸터 스타일 */
+
 footer {
-    /* 변경된 부분: 푸터의 배경색을 흰색으로 변경 */
-    background-color: white;
-    /* 변경된 부분: 푸터의 글씨색을 검정색으로 변경 */
-    color: black;
+    background-color: #004e92;
+    color: white;
     text-align: center;
-    padding: 1em;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
