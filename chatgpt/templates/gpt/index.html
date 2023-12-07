@@ -29,7 +29,7 @@
     <form id="questionForm" action="chat" method="post" entype="application/x-www-form-urlencoded" onsubmit="submitForm(event)">
         {% csrf_token %}
         <div id="file-module-0">
-            <span>Q</span> <textarea id="question" name="question" onkeydown="handleEnterKey(event)"></textarea>
+            <span>Q</span> <textarea id="question" name="question" placeholder="(ex) 수어가 뭐야?" onkeydown="handleEnterKey(event)"></textarea>
         </div>
         <div><button id="text-button" type="submit">질문</button></div>
     </form>
