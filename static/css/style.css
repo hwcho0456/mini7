@@ -2,7 +2,7 @@ h2, h3, p {
     font-family: 'Nanum Myeongjo', sans-serif;
 }
 header {
-    font-family: 'Song Myung', serif;
+    font-family: 'Moirai One', serif;
     /* 변경된 부분: 헤더의 배경색을 흰색으로 변경 */
     background: linear-gradient(to left, #000428, #004e92);    
     /* 변경된 부분: 헤더의 글씨색을 검정색으로 변경 */
@@ -11,8 +11,7 @@ header {
     text-align: center;
 }
 h1 {
-    font-family: 'Song Myung', serif;
-    font-weight: bold;
+    font-family: 'Moirai One', serif;
 }
 
 body {
