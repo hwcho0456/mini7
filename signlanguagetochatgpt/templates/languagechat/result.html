@@ -28,7 +28,9 @@
       <h3>이미지</h3>
     </div>
     <div class="result">
-      <img src="{% static 'languagechat/1.png' %}" alt="로딩 중">
+      {% for img in imglist %}
+        <img src='../media/{{img}}'>
+      {% endfor %}
     </div>
   </div>
 
@@ -49,5 +51,8 @@
       </div>
     </div>
   </div>
+
+
+
 </body>
 </html>

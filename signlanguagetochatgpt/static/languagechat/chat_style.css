@@ -1,5 +1,5 @@
 header,head {
-    font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Nanum Myeongjo', serif;
     background: linear-gradient(to left, #000428, #004e92);
     color: white; 
     padding: 1em;
@@ -38,6 +38,11 @@ header,head {
     box-sizing: border-box;
     padding: 40px;
   }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
   
   div.right {
     width: 50%;
@@ -60,6 +65,7 @@ header,head {
   div.result {
     width: 100%;
     height: 150px;
+    max-height: 100%;
     border-radius: 0 20px 20px 20px;
     background-color: white;
     border-color: #43b68a;
@@ -71,6 +77,8 @@ header,head {
     justify-content: center;
   }
   
+
+
   div.button {
     display: flex;
     padding: 20px;

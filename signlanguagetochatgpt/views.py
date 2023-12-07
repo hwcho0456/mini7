@@ -30,12 +30,12 @@ def index(request):
 
 def chat(request):
     if request.method == 'POST' and request.FILES['files']:
-
         results=[]
         #form에서 전송한 파일을 획득한다.
         #각 파일별 예측 결과들을 모아야 질문을 위한 언어가 완성된다.
         files = request.FILES.getlist('files')
         chatGptPrompt = ""
+        imglist = []
         for idx,file in enumerate(files, start=0):
                 # files:
 
@@ -57,6 +57,7 @@ def chat(request):
             result = Result()
             result.image = file
             result.pub_date = timezone.datetime.now()
+            imglist.append(str(result.image))
             result.save()
 
 
@@ -103,11 +104,13 @@ def chat(request):
         selectedChatResult.content = content
         selectedChatResult.save()
         
-     
+        
 
         context = {
         'question': selectedChatResult.prompt,
-        'result': selectedChatResult.content
-    }
+        'result': selectedChatResult.content,
+        'imglist': imglist
+        }
+        
 
     return render(request, 'languagechat/result.html', context)  
