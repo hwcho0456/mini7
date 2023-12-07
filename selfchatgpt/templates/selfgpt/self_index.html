@@ -7,98 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Language Translation</title>
     <link rel="stylesheet" href="{% static 'selfgpt/style.css' %}">
-    <style>
-        /* 추가된 슬라이더 스타일 */
-        .slider {
-            position: relative;
-            overflow: hidden;
-            width: 600px;
-            height: 400px;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            animation: slider 7.5s infinite linear;
-        }
-
-        .slide:nth-child(1) {
-            background-image: url("{% static 'selfgpt/img1.jpg' %}");
-            animation-delay: 0;
-        }
-
-        .slide:nth-child(2) {
-            background-image: url("{% static 'selfgpt/img2.jpg' %}");
-            animation-delay: -2.5s;
-        }
-
-        .slide:nth-child(3) {
-            background-image: url("{% static 'selfgpt/img3.jpg' %}");
-            animation-delay: -5s;
-        }
-
-        @keyframes slider {
-            0% {
-                transform: translateX(0);
-            }
-
-            26% {
-                transform: translateX(0);
-            }
-
-            33% {
-                transform: translateX(-100%);
-                animation-timing-function: step-end;
-            }
-
-            93% {
-                transform: translateX(100%);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-    </style>
+    <!-- slick 라이브러리 스타일 추가 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        let currentSlideIndex = 0;
-        let slides;
-
-        function showSlide(index) {
-            currentSlideIndex = index;
-            updateSlideVisibility();
-        }
-
-        function nextSlide() {
-            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-            updateSlideVisibility();
-        }
-
-        function prevSlide() {
-            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-            updateSlideVisibility();
-        }
-
-        function updateSlideVisibility() {
-            slides.forEach((slide, i) => {
-                if (i === currentSlideIndex) {
-                    slide.style.transform = 'translateX(0)';
-                    slide.classList.add('active');
-                } else {
-                    slide.style.transform = `translateX(${100 * (i - currentSlideIndex)}%)`;
-                    slide.classList.remove('active');
-                }
+        // JavaScript 코드 (이 부분은 원래의 JavaScript 코드 그대로 사용하시면 됩니다.)
+        $(document).ready(function () {
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                adaptiveHeight: true
             });
-        }
-
-        window.addEventListener('load', function () {
-            slides = document.querySelectorAll('.section');
-            updateSlideVisibility();
         });
     </script>
 </head>
@@ -113,11 +39,13 @@
         <a href="/">home</a>
     </nav>
     <div class="slider-container">
-        <!-- 슬라이더 추가 -->
+        <!-- Slick 슬라이더 추가 -->
         <div class="slider">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
+            <div><img src="https://buly.kr/8eiIT2z" alt="기초 수어 이미지"></div>
+            <div><img src="https://url.kr/mr8x3l" alt="반갑습니다."></div>
+            <div><img src="https://url.kr/f5hpjx" alt="감사합니다."></div>
+            <div><img src="https://url.kr/nh46b1" alt="배가 부릅니다."></div>
+            <div><img src="https://url.kr/rc4o6e" alt="졸립니다."></div>
         </div>
         <div class="sections">
             <!-- 첫 번째 섹션 -->
@@ -132,7 +60,7 @@
             <!-- 두 번째 섹션 -->
             <section class="section">
                 <h3>안녕하세요.</h3>
-                <img src="" alt="안녕하세요.">
+                <img src="https://url.kr/fmbtpx" alt="안녕하세요.">
                 <div class="text-container">
                     <p>오른 손바닥으로 주먹을 쥔 왼 팔을 쓸어내린 다음, 두 주먹을 쥐고 </p>
                     <p>바닥이 아래로 향하게하여 가슴 앞에서 아래로 내린다.</p>
@@ -185,11 +113,4 @@
             </section>
         </div>
     </div>
-    <footer>
-        <h8>
-            image made by https://sldict.korean.go.kr/
-        </h8>
-    </footer>
-</body>
-
-</html>
+    <footer
