@@ -1,12 +1,12 @@
 header {
-  font-family: 'Song Myung', serif;
+  font-family: 'Moirai One', serif;
   background: linear-gradient(to left, #000428, #004e92);
   color: white; 
   padding: 1em;
   font-weight: bold;
 }
 h1 {
-  font-family: 'Song Myung', serif;
+  font-family: 'Moirai One', serif;
   color: white;
   text-align: center;
   font-size: xx-large;
@@ -89,7 +89,7 @@ button {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Moirai One', serif;
   margin: 0;
   padding: 0;
   background-color: #eeeeee;
